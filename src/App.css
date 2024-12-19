@@ -1,0 +1,185 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+  background: url('game1.webp');
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.app {
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  color: #e62020;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: linear-gradient(135deg, #db3442, #8e44ad);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 10px;
+}
+
+.back-button, .next-round-button{
+  width: 30%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #edf2f4;
+  background: #ef233c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-right: 10px;
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #de2d2d;
+}
+
+.back-button:hover, .next-round-button:hover {
+  transform: scale(0.98);
+}
+
+.start-button:disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+.back-button:disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+.result-message {
+  background-color: #ce356d;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.game-area {
+  position: relative;
+  height: 400px;
+  margin-top: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 6px 30px rgba(0, 0, 0, 0.05);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ball Styles */
+.ball {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.7),
+    rgba(2, 26, 68, 0.5), 
+    rgba(0, 9, 16, 0.4) 
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0.85;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
+.ball::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.ball::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.ball:hover {
+  transform: scale(1.1); 
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .app {
+    padding: 30px 20px;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .input-field, .start-button, .back-button, .next-round-button{
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 75%;
+    margin-top: 10px;
+    margin-right: 0px;
+  }
+}

@@ -1,0 +1,99 @@
+/* General page styling */
+.landing-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #edf2f4;
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* Card design */
+.landing-card {
+  background: #f0e7ec;
+  padding: 100px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 100%;
+}
+
+/* Title styling */
+.landing-title {
+  font-size: 4rem;
+  color: #e62020;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: linear-gradient(135deg, #db3442, #8e44ad);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+}
+
+
+/* Subtitle styling */
+.landing-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #de2d2d;
+}
+
+/* Input field styling */
+.input-field {
+  width: 80%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background: #2b2d42;
+  color: #edf2f4;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.input-field:focus {
+  background: #3b3f58;
+}
+
+/* Start button styling */
+.start-button {
+  width: 30%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #edf2f4;
+  background: #ef233c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.start-button:hover {
+  background: #d90429;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .landing-card {
+    padding: 30px 20px;
+  }
+
+  .landing-title {
+    font-size: 3rem;
+  }
+
+  .input-field, .start-button {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 75%;
+  }
+}
