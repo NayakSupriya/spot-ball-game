@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import LandingPage from './LandingPage';
 
-const MAX_BALLS = 5;
+const MAX_BALLS = 50;
 
 interface Ball {
   id: number;
